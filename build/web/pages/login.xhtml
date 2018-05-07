@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<ui:composition 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      template="/templates/modeloSistema.xhtml">
+    
+      <!-- PARTE SUPERIOR DA TELA -->   
+      <ui:define name="menu">
+          <h:form id="frmPrincipal">
+              <p:dataTable id="tblPrincipal" 
+                           emptyMessage="">
+                  
+                  <f:facet name="header">
+                      R-TMS - Sistema de Saida de Cargas
+                  </f:facet>
+                  
+              </p:dataTable>
+          </h:form>
+       
+      </ui:define>
+      
+      <!-- PARTE INFERIOR DA TELA -->  
+      <ui:define name="conteudo">
+          <h:form id="frmLogin">
+              <p:dataTable id="tblUsuario" widgetVar="tabelaUsuario"
+                           emptyMessage="">
+                  
+                  <f:facet name="header">
+                      Logar no Sistema
+                  </f:facet>
+                  
+                  <f:facet name="footer">
+                       <p:commandButton value="Entrar"/>
+                  </f:facet>
+                  
+              </p:dataTable>
+          </h:form>
+          
+      </ui:define>
+    
+</ui:composition>
